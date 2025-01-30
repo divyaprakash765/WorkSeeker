@@ -28,11 +28,12 @@ const Navbar = () => {
             toast.error(error.response.data.message);
         }
     }
+    
     return (
         <div className='bg-white'>
             <div className='flex items-center justify-between mx-auto max-w-7xl h-16'>
                 <div>
-                    <h1 className='text-2xl font-bold'>Job<span className='text-[#F83002]'>Portal</span></h1>
+                    <h1 className='text-2xl font-bold'>Dev<span className='text-[#F83002]'>Recruit</span></h1>
                 </div>
                 <div className='flex items-center gap-12'>
                     <ul className='flex font-medium items-center gap-5'>
@@ -50,8 +51,6 @@ const Navbar = () => {
                                 </>
                             )
                         }
-
-
                     </ul>
                     {
                         !user ? (
@@ -67,7 +66,7 @@ const Navbar = () => {
                                     </Avatar>
                                 </PopoverTrigger>
                                 <PopoverContent className="w-80">
-                                    <div className=''>
+                                    <div>
                                         <div className='flex gap-2 space-y-2'>
                                             <Avatar className="cursor-pointer">
                                                 <AvatarImage src={user?.profile?.profilePhoto} alt="@shadcn" />
@@ -86,7 +85,6 @@ const Navbar = () => {
                                                     </div>
                                                 )
                                             }
-
                                             <div className='flex w-fit items-center gap-2 cursor-pointer'>
                                                 <LogOut />
                                                 <Button onClick={logoutHandler} variant="link">Logout</Button>
@@ -97,10 +95,8 @@ const Navbar = () => {
                             </Popover>
                         )
                     }
-
                 </div>
             </div>
-
         </div>
     )
 }
